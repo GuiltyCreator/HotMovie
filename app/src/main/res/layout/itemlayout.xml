@@ -14,22 +14,46 @@
         <ImageView
                 android:id="@+id/img"
                 android:layout_width="70dp"
-                android:layout_height="140dp"
+                android:layout_height="170dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 tools:src="@mipmap/ic_launcher"
                 app:imageUrl="@{m.img}"
         />
+
+        <TextView
+                android:id="@+id/movie_nameCn"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="7dp"
+                android:singleLine="true"
+                android:layout_marginTop="15dp"
+                tools:text="电影"
+                android:text="@{m.titleCn}"
+                android:gravity="center_vertical"/>
+        <TextView
+                android:id="@+id/movie_nameEn"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="7dp"
+                android:layout_below="@id/movie_nameCn"
+                android:singleLine="true"
+                tools:text="movie"
+                android:text="@{m.titleEn}"
+                android:gravity="center_vertical"/>
         <TextView
                 android:id="@+id/actorName1"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:layout_toRightOf="@id/img"
-                android:layout_marginTop="25dp"
+                android:layout_below="@id/movie_nameEn"
                 android:layout_marginLeft="7dp"
-            tools:text="主演1：吴彦祖"
-            android:gravity="center_vertical"
-        android:text="@{`主演2：`+m.actorName1}"/>
+                tools:text="主演1：吴彦祖"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:text="@{`主演1：`+m.actorName1}"/>
         <TextView
                 android:id="@+id/actorName2"
                 android:layout_width="match_parent"
@@ -37,8 +61,9 @@
                 android:layout_toRightOf="@id/img"
                 android:layout_marginLeft="7dp"
                 android:layout_below="@id/actorName1"
+                android:singleLine="true"
                 tools:text="主演2：郭富城"
-                android:text="@{`主演1：`+m.actorName2}"
+                android:text="@{`主演2：`+m.actorName2}"
                 android:gravity="center_vertical"/>
         <TextView
                 android:id="@+id/commonSpecial"
@@ -47,6 +72,7 @@
                 android:layout_toRightOf="@id/img"
                 android:layout_marginLeft="7dp"
                 android:layout_below="@id/actorName2"
+                android:singleLine="true"
                 tools:text="帅哥云集"
                 android:text="@{m.commonSpecial}"
                 android:gravity="center_vertical"/>
@@ -57,6 +83,7 @@
                 android:layout_toRightOf="@id/img"
                 android:layout_marginLeft="7dp"
                 android:layout_below="@id/commonSpecial"
+                android:singleLine="true"
                 tools:text="导演：硝酸铜"
                 android:text="@{`导演：`+m.directorName}"
                 android:gravity="center_vertical"/>
@@ -67,6 +94,7 @@
                 android:layout_toRightOf="@id/img"
                 android:layout_marginLeft="7dp"
                 android:layout_below="@id/directorName"
+                android:singleLine="true"
                 tools:text="动作"
                 android:text="@{`类型：`+m.type}"
                 android:gravity="center_vertical"/>
